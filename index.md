@@ -1,37 +1,104 @@
-## Welcome to GitHub Pages
+## [SMSALES](https://smsales.co.ke) API DOCS
+* Welcome to [SMSALES](https://smsales.co.ke) API,this api is organized around REST API. Our API has predictable resource-oriented URLs, accepts json/form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs that is GET and POST. You can invoke our API endpoints using REST clients like Postman or SoapUI and command line tools like curl and Node.js.
 
-You can use the [editor on GitHub](https://github.com/SHIFTECH-AFRICA/smsales-api-docs/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+* The [SMSALES](https://smsales.co.ke) API only accepts the Content-Type: application/json & Accept: application/json
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### How To Get Started
+* To make an API call, you will need to authenticate your app. We have provided an OAuth API for you to generate an access token, we support Authorization grant type. To authorize your API call to the OAuth API, you will need a Basic Auth over HTTPS authorization token.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+#### Generating Access Token ***GET***
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+   https://api.smsales.co.ke/api/v1/token 
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+```json
+var request = require('request');
+var options = {
+'method': 'GET',
+'url': 'https://api.smsales.co.ke/api/v1/token',
+    'headers': {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Authorization': 'Basic ACCOUNT_API_TOKEN'
+    }
+}
+```
+```json
+{
+  "data": {
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnNtc2FsZXMuY28ua2VcL2FwaVwvdjFcL3Rva2VuIiwiaWF0IjoxNjIxOTY1OTk5LCJleHAiOjE2MjE5Njk1OTksIm5iZiI6MTYyMTk2NTk5OSwianRpIjoiNUlvc3NjdlRqZDU3bVdLcyIsInN1YiI6IjhiNWE5ZmEwLTM3ODYtNDRhOS05NmEwLWVlMTlmOTU2NDVjZiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.mioHmrN-KJb8_rJd9FayfhBGI6G8Kg6g9nNg8c4GxjM",
+    "TokenType": "Bearer",
+    "Expires": 3600
+  }
+}
+```
 
-### Jekyll Themes
+For more details see [Account Api Token](https://smsales.co.ke/profile).
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/SHIFTECH-AFRICA/smsales-api-docs/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Fetching Latest Sent Sms's ***GET***
+```markdown
+   https://api.smsales.co.ke/api/v1/sms
+```
 
-### Support or Contact
+```json
+var request = require('request');
+var options = {
+'method': 'GET',
+'url': 'https://api.smsales.co.ke/api/v1/sms',
+    'headers': {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Authorization': 'Bearer GIVE_THE_GENERATED_BEARER_TOKEN'
+    }
+}
+```
+### Sending Bulk Sms ***POST***
+```markdown
+   https://api.smsales.co.ke/api/v1/sms/send
+```
+*Params*
+```json
+{
+  "message": "", // required
+  "phone_numbers": ["254748653542","254748653542","254748653542"], // required
+  "scheduled_at": "'Y-m-d H:i:s", // optional
+  "callback_url": "https://smsales.co.ke/" // optional
+}
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```json
+var request = require('request');
+var options = {
+'method': 'GET',
+'url': 'https://api.smsales.co.ke/api/v1/sms/send',
+    'headers': {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Authorization': 'Bearer GIVE_THE_GENERATED_BEARER_TOKEN'
+    },
+body: JSON.stringify({"message":"Hello","phone_numbers":["254748653542","254748653542","254748653542"]})
+
+}
+```
+```json
+{
+  "data": {
+    "message": "Accepted for processing..."
+  }
+}
+```
+* CallBack Results *if provided*.
+```json
+{
+  "sent": true,
+  "phone_number": "254748653542",
+  "batch": "1EPDHVREI6",
+  "account": {
+    "sms_balance": 764
+  }
+}
+```
+
+## Support or Contact
+
+Having trouble with API integration? Check out our [libraries](#) or [contact support](https://wa.me/message/UW2M6CP2ACOAF1) and we’ll help you sort it out.
