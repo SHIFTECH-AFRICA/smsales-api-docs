@@ -60,7 +60,7 @@ var options = {
 ```json
 {
   "message": "", // required
-  "phone_numbers": ["254748653542","254748653542","254748653542"], // required
+  "phone_numbers": ["2547XXXXXXXX","2540XXXXXXXX","2547XXXXXXXX"], // required
   "scheduled_at": "'Y-m-d H:i:s", // optional
   "callback_url": "https://smsales.co.ke/" // optional
 }
