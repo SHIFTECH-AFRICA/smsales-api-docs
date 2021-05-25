@@ -87,7 +87,8 @@ body: JSON.stringify({"message":"Hello","phone_numbers":["254748653542","2547486
   }
 }
 ```
-* CallBack Results *if provided*.
+CallBack Results *if provided*.
+
 ```json
 {
   "sent": true,
