@@ -76,7 +76,7 @@ var options = {
     'Accept': 'application/json',
     'Authorization': 'Bearer GIVE_THE_GENERATED_BEARER_TOKEN'
     },
-body: JSON.stringify({"message":"Hello","phone_numbers":["254748653542","254748653542","254748653542"]})
+body: JSON.stringify({"message":"Hello","phone_numbers":["2547XXXXXXXX","2540XXXXXXXX","2547XXXXXXXX"]})
 
 }
 ```
@@ -92,7 +92,7 @@ CallBack Results *if provided*.
 ```json
 {
   "sent": true,
-  "phone_number": "254748653542",
+  "phone_number": "2547XXXXXXXX",
   "batch": "1EPDHVREI6",
   "account": {
     "sms_balance": 764
