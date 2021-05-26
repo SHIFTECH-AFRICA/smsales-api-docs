@@ -6,7 +6,8 @@
 ### How To Get Started
 * To make an API call, you will need to authenticate your app. We have provided an OAuth API for you to generate an access token, we support Authorization grant type. To authorize your API call to the OAuth API, you will need a Basic Auth over HTTPS authorization token.
 
-#### Generating Access Token ***GET***
+#### Generating Access Token <span style="color:green"><kbd>*GET*</kbd></span>
+
 ```markdown
    https://api.smsales.co.ke/api/v1/token 
 ```
@@ -35,7 +36,7 @@ var options = {
 
 For more details see [Account Api Token](https://smsales.co.ke/profile).
 
-### Fetching Latest Sent Sms's ***GET***
+### Fetching Latest Sent Sms's <span style="color:green"><kbd>*GET*</kbd></span>
 ```markdown
    https://api.smsales.co.ke/api/v1/sms
 ```
@@ -52,7 +53,7 @@ var options = {
     }
 }
 ```
-### Sending Bulk Sms ***POST***
+### Sending Bulk Sms <span style="color:red"><kbd>*POST*</kbd></span>
 ```markdown
    https://api.smsales.co.ke/api/v1/sms/send
 ```
