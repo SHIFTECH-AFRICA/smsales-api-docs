@@ -62,7 +62,7 @@ var options = {
 {
   "message": "", // required
   "phone_numbers": ["2547XXXXXXXX","2540XXXXXXXX","2547XXXXXXXX"], // required
-  "scheduled_at": "'Y-m-d H:i:s", // optional
+  "scheduled_at": "Y-m-d H:i:s", // optional
   "callback_url": "https://yourdomain/report" // optional this should be a POST request
 }
 ```
@@ -103,4 +103,4 @@ CallBack Results *if provided*.
 
 ## Support or Contact
 
-Having trouble with API integration? Check out our [libraries](#) or [contact support](https://wa.me/message/UW2M6CP2ACOAF1) and we’ll help you sort it out.
+Having trouble with API integration? Check out our [libraries](https://github.com/SHIFTECH-AFRICA/smsales-php-sdk) or [contact support](https://wa.me/message/UW2M6CP2ACOAF1) and we’ll help you sort it out.
