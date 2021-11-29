@@ -60,10 +60,11 @@ var options = {
 *Params*
 ```json
 {
-  "message": "", // required
-  "phone_numbers": ["2547XXXXXXXX","2540XXXXXXXX","2547XXXXXXXX"], // required
-  "scheduled_at": "Y-m-d H:i:s", // optional
-  "callback_url": "https://yourdomain/report" // optional this should be a POST request
+  "api_sender" => "shiftech",// required check on your senderID's list for the API Sender
+  "message" => "Hello Smsales.",// required
+  "phone_numbers" => ["2547XXXXXXXX","2540XXXXXXXX","2547XXXXXXXX"],// required
+  "scheduled_at" => "Y-m-d H:i:s", // optional
+  "callback_url"=> "https://yourdomain/report"// optional this should be a POST request
 }
 ```
 
@@ -77,14 +78,14 @@ var options = {
     'Accept': 'application/json',
     'Authorization': 'Bearer GIVE_THE_GENERATED_BEARER_TOKEN'
     },
-body: JSON.stringify({"message":"Hello","phone_numbers":["2547XXXXXXXX","2540XXXXXXXX","2547XXXXXXXX"]})
+body: JSON.stringify({"api_sender":"shiftech","message":"Hello","phone_numbers":["2547XXXXXXXX","2540XXXXXXXX","2547XXXXXXXX"]})
 
 }
 ```
 ```json
 {
   "data": {
-    "message": "Accepted for processing..."
+    "message": "Accepted for dispatch..."
   }
 }
 ```
@@ -93,10 +94,13 @@ CallBack Results *if provided*.
 ```json
 {
   "sent": true,
-  "phone_number": "2547XXXXXXXX",
-  "batch": "1EPDHVREI6",
+  "sender": "SHIFTECH", // Youe senderID
+  "api_sender": "shiftech", // Your api sender
+  "phone_number": "254XXXXXXXX",
+  "batch": "1KTHKGKM8R",
   "account": {
-    "sms_balance": 764
+    "sender_balance": 7000,
+    "sms_balance": 13200
   }
 }
 ```
