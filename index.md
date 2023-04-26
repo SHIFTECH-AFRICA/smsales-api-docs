@@ -53,6 +53,42 @@ var options = {
     }
 }
 ```
+#### Getting Sms Units Account Balance <span style="color:green"><kbd>GET</kbd></span>
+```markdown
+   https://api.smsales.co.ke/api/v1/sms/balance/account
+```
+
+```json
+var request = require('request');
+var options = {
+'method': 'GET',
+'url': 'https://api.smsales.co.ke/api/v1/sms/balance/account',
+    'headers': {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Authorization': 'Bearer GIVE_THE_GENERATED_BEARER_TOKEN'
+    }
+}
+```
+
+#### Getting Sms Units Sender ID Balance <span style="color:green"><kbd>GET</kbd></span>
+```markdown
+   https://api.smsales.co.ke/api/v1/sms/balance/sender
+```
+
+```json
+var request = require('request');
+var options = {
+'method': 'GET',
+'url': 'https://api.smsales.co.ke/api/v1/sms/balance/sender',
+    'headers': {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Authorization': 'Bearer GIVE_THE_GENERATED_BEARER_TOKEN'
+    }
+}
+```
+
 #### Sending Bulk Sms <span style="color:red"><kbd>POST</kbd></span>
 ```markdown
    https://api.smsales.co.ke/api/v1/sms/send
