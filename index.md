@@ -129,14 +129,18 @@ CallBack Results *if provided*.
 
 ```json
 {
-  "sent": true,
-  "sender": "SHIFTECH", // Youe senderID
-  "api_sender": "shiftech", // Your api sender
-  "phone_number": "254XXXXXXXX",
-  "batch": "1KTHKGKM8R",
-  "account": {
-    "sender_balance": 7000,
-    "sms_balance": 13200
+  "sent":true,
+  "sender":"SHIFTECH",
+  "apiSender":"shiftech",
+  "phoneNumbers":[
+    "254XXXXXXXXX",
+    "254XXXXXXXXX",
+    "254XXXXXXXXX"
+  ],
+  "batch":"1CRVD1GEXE",
+  "account":{
+    "smsBalance":"663",
+    "smsUsage":"24"
   }
 }
 ```
