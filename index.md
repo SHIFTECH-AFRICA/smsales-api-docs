@@ -121,7 +121,8 @@ body: JSON.stringify({"api_sender":"shiftech","message":"Hello","phone_numbers":
 ```json
 {
   "data": {
-    "message": "Accepted for dispatch..."
+        "batch": "1DIIPJGDP4",
+        "message": "Accepted for dispatch..."
   }
 }
 ```
@@ -137,7 +138,7 @@ CallBack Results *if provided*.
     "254XXXXXXXXX",
     "254XXXXXXXXX"
   ],
-  "batch":"1CRVD1GEXE",
+  "batch":"1DIIPJGDP4",
   "account":{
     "smsBalance":"663",
     "smsUsage":"24"
