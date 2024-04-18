@@ -34,7 +34,7 @@ var options = {
 }
 ```
 
-For more details see [Account Api Token](https://smsales.co.ke/profile).
+For more details see [Account Api Token](https://smsales.co.ke/token).
 
 #### Fetching Latest Sent Sms's <span style="color:green"><kbd>GET</kbd></span>
 ```markdown
