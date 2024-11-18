@@ -4,7 +4,8 @@
 * The [SMSALES](https://smsales.co.ke) API only accepts the Content-Type: application/json & Accept: application/json
 
 ### How To Get Started
-* To make an API call, you will need to authenticate your app. We have provided an OAuth API for you to generate an access token, we support Authorization grant type. To authorize your API call to the OAuth API, you will need a Basic Auth over HTTPS authorization token.
+* To make an API call, you must authenticate your app. We have provided an OAuth API for you to generate an access token, we support the Authorization grant type. You will need a Basic Auth over HTTPS authorization token to authorize your API call to the OAuth API.
+* Get the Postman collection from [API ENDPOINTS](https://alphabet.nyc3.cdn.digitaloceanspaces.com/shared/smsales/smsales-postman-collection.json)
 
 #### Generating Access Token <span style="color:green"><kbd>GET</kbd></span>
 
